@@ -1,7 +1,7 @@
 <template>
-  <div></div>
+  <div>dasda</div>
 </template>
 
 <script setup></script>
 
-<style scoped></style>
+<style></style>
