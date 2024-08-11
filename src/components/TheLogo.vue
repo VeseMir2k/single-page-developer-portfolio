@@ -9,5 +9,6 @@ export default {}
 <style lang="scss">
 .logo {
   @include heading-m-mobile-font;
+  margin: 0;
 }
 </style>
