@@ -7,19 +7,21 @@
     <img class="header__profile-image" :src="profileImage" alt="" />
     <img class="header__rings-pattern" :src="ringsPattern" alt="" />
     <img class="header__circle-pattern" :src="circlePattern" alt="" />
+    <HeaderIntro />
   </header>
 </template>
 
 <script>
 import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
+import HeaderIntro from './HeaderIntro.vue'
 import profileImage from '../../assets/image-profile-mobile.webp'
 import circlePattern from '../../assets/pattern-circle.svg'
 import ringsPattern from '../../assets/pattern-rings.svg'
 
 export default {
   name: 'TheHeader',
-  components: { TheLogo, TheSocials },
+  components: { TheLogo, TheSocials, HeaderIntro },
   setup() {
     return { profileImage, circlePattern, ringsPattern }
   }
@@ -30,7 +32,8 @@ export default {
 .header {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   &__logo-socials {
     width: 100%;
     display: flex;
@@ -52,7 +55,7 @@ export default {
   }
   &__circle-pattern {
     position: absolute;
-    top: 270px;
+    top: 265px;
     right: -65px;
   }
 }

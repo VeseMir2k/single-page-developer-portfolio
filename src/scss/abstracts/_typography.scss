@@ -23,7 +23,7 @@
   line-height: 32px;
 }
 
-@mixin heading-body-font {
+@mixin body-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -55,7 +55,7 @@
   line-height: 32px;
 }
 
-@mixin heading-body-tablet-font {
+@mixin body-tablet-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -87,7 +87,7 @@
   line-height: 32px;
 }
 
-@mixin heading-body-mobile-font {
+@mixin body-mobile-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
   font-weight: 400;
