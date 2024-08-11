@@ -5,6 +5,8 @@
       <TheSocials />
     </div>
     <img class="header__profile-image" :src="profileImage" alt="" />
+    <img class="header__rings-pattern" :src="ringsPattern" alt="" />
+    <img class="header__circle-pattern" :src="circlePattern" alt="" />
   </header>
 </template>
 
@@ -12,12 +14,14 @@
 import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
 import profileImage from '../../assets/image-profile-mobile.webp'
+import circlePattern from '../../assets/pattern-circle.svg'
+import ringsPattern from '../../assets/pattern-rings.svg'
 
 export default {
   name: 'TheHeader',
   components: { TheLogo, TheSocials },
   setup() {
-    return { profileImage }
+    return { profileImage, circlePattern, ringsPattern }
   }
 }
 </script>
@@ -39,6 +43,17 @@ export default {
   }
   &__profile-image {
     width: 180px;
+  }
+  &__rings-pattern {
+    position: absolute;
+    top: 130px;
+    left: -350px;
+    z-index: -1;
+  }
+  &__circle-pattern {
+    position: absolute;
+    top: 270px;
+    right: -65px;
   }
 }
 </style>
