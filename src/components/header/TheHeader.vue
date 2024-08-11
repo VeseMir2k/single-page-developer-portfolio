@@ -1,16 +1,44 @@
 <template>
-  <TheLogo />
-  <TheSocilas />
+  <header class="header">
+    <div class="header__logo-socials">
+      <TheLogo />
+      <TheSocials />
+    </div>
+    <img class="header__profile-image" :src="profileImage" alt="" />
+  </header>
 </template>
 
 <script>
 import TheLogo from '../TheLogo.vue'
-import TheSocilas from '../TheSocilas.vue'
+import TheSocials from '../TheSocials.vue'
+import profileImage from '../../assets/image-profile-mobile.webp'
 
 export default {
   name: 'TheHeader',
-  components: { TheLogo, TheSocilas }
+  components: { TheLogo, TheSocials },
+  setup() {
+    return { profileImage }
+  }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__logo-socials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+  &__profile-image {
+    width: 180px;
+  }
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
   <div class="socials">
-    <a class="socials__social" v-for="icon in socialIcons" :key="icon.name" :href="icon.link"
-      ><img class="socials__icon" :src="icon.src" :alt="icon.name"
-    /></a>
+    <a class="socials__social" v-for="icon in socialIcons" :key="icon.name" :href="icon.link">
+      <img class="socials__icon" :src="icon.src" :alt="icon.name" />
+    </a>
   </div>
 </template>
 
@@ -50,7 +50,6 @@ export default {
 .socials {
   display: flex;
   gap: 25px;
-  margin-top: 20px;
   &__icon {
     width: 20px;
   }
