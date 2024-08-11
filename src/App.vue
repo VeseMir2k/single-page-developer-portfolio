@@ -1,7 +1,14 @@
 <template>
-  <div>dasda</div>
+  <TheHeader />
 </template>
 
-<script setup></script>
+<script>
+import TheHeader from './components/header/TheHeader.vue'
 
-<style></style>
+export default {
+  name: 'App',
+  components: { TheHeader }
+}
+</script>
+
+<style lang="scss" scoped></style>
