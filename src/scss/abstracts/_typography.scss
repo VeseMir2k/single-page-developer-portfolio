@@ -1,7 +1,7 @@
 // Desktop
 
 @mixin heading-xl-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 88px;
   font-weight: 700;
   letter-spacing: -2.5px;
@@ -9,7 +9,7 @@
 }
 
 @mixin heading-l-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -17,14 +17,14 @@
 }
 
 @mixin heading-m-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
 @mixin heading-body-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -33,7 +33,7 @@
 // Tablet
 
 @mixin heading-xl-tablet-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 72px;
   font-weight: 700;
   letter-spacing: -2px;
@@ -41,7 +41,7 @@
 }
 
 @mixin heading-l-tablet-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -49,14 +49,14 @@
 }
 
 @mixin heading-m-tablet-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
 @mixin heading-body-tablet-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -65,7 +65,7 @@
 // Mobile
 
 @mixin heading-xl-mobile-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -73,7 +73,7 @@
 }
 
 @mixin heading-l-mobile-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -81,29 +81,29 @@
 }
 
 @mixin heading-m-mobile-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
 @mixin heading-body-mobile-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
 }
 
 @mixin button-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 2.3px;
   font-weight: 700;
+  letter-spacing: 2.3px;
+  line-height: 26px;
 }
 
 @mixin tag-font {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $space-grotesk-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
