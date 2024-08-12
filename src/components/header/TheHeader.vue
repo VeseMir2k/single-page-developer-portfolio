@@ -34,6 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 80px;
   &__logo-socials {
     width: 100%;
     display: flex;
