@@ -7,11 +7,11 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 import gitHubIcon from '../assets/icon-github.svg'
 import frontendMentorIcon from '../assets/icon-frontend-mentor.svg'
 import likedInIcon from '../assets/icon-linkedin.svg'
 import twitterIcon from '../assets/icon-twitter.svg'
-import { ref } from 'vue'
 
 export default {
   name: 'TheSocials',
