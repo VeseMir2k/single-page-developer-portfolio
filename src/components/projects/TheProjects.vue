@@ -1,15 +1,17 @@
 <template>
   <section class="projects-section">
     <ProjectsHeader />
+    <ProjectCard />
   </section>
 </template>
 
 <script>
+import ProjectCard from './ProjectCard.vue'
 import ProjectsHeader from './ProjectsHeader.vue'
 
 export default {
   name: 'TheProjects',
-  components: { ProjectsHeader }
+  components: { ProjectsHeader, ProjectCard }
 }
 </script>
 

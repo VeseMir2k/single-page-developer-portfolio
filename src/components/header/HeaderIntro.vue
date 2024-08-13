@@ -1,10 +1,10 @@
 <template>
   <div class="header-intro">
     <h2 class="header-intro__title">
-      Nice to meet you! I'm <span class="intro__name">Adam Keyes</span>.
+      Nice to meet you! I'm <span class="header-intro__name">Adam Keyes</span>.
     </h2>
     <p class="header-intro__description">
-      Based in the UK, I’m a front-end developer passionate about building accessible web apps that
+      Based in the UK, I'm a front-end developer passionate about building accessible web apps that
       users love.
     </p>
     <BasicButton link="#" text="contact me" />

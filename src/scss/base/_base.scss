@@ -23,6 +23,10 @@ h3 {
   @include heading-l-mobile-font;
   margin: 0;
 }
+h4 {
+  @include heading-m-mobile-font;
+  margin: 0;
+}
 
 p {
   @include body-mobile-font;
