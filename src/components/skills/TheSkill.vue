@@ -1,6 +1,6 @@
 <template>
   <div class="skill">
-    <h4 class="skill__title">{{ name }}</h4>
+    <h3 class="skill__title">{{ name }}</h3>
     <p class="skill__exp">{{ exp }} Experience</p>
   </div>
 </template>
@@ -23,14 +23,10 @@ export default {
 .skill {
   text-align: center;
   &__title {
-    margin: 0;
     margin-bottom: 1px;
-    @include heading-l-mobile-font;
   }
   &__exp {
-    @include body-mobile-font;
     color: $grey-color;
-    margin: 0;
   }
 }
 </style>

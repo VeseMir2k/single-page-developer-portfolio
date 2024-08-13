@@ -1,14 +1,9 @@
 <template>
-  <h2 class="logo">adamkeys</h2>
+  <h1 class="logo">adamkeys</h1>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style lang="scss">
-.logo {
-  @include heading-m-mobile-font;
-  margin: 0;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -19,6 +19,7 @@ export default {
 <style lang="scss" scoped>
 .button {
   @include button-font;
+  display: inline-block;
   text-transform: uppercase;
   color: $white-color;
   text-decoration: none;
