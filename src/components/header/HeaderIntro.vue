@@ -1,7 +1,9 @@
 <template>
-  <div class="intro">
-    <h2 class="intro__title">Nice to meet you! I'm <span class="intro__name">Adam Keyes</span>.</h2>
-    <p class="intro__description">
+  <div class="header-intro">
+    <h2 class="header-intro__title">
+      Nice to meet you! I'm <span class="intro__name">Adam Keyes</span>.
+    </h2>
+    <p class="header-intro__description">
       Based in the UK, I’m a front-end developer passionate about building accessible web apps that
       users love.
     </p>
@@ -19,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.intro {
+.header-intro {
   text-align: center;
   margin-top: 40px;
   &__title {

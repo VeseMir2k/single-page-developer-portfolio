@@ -1,7 +1,7 @@
 <template>
-  <div class="skill">
-    <h3 class="skill__title">{{ name }}</h3>
-    <p class="skill__exp">{{ exp }} Experience</p>
+  <div class="skill-card">
+    <h3 class="skill-card__title">{{ name }}</h3>
+    <p class="skill-card__exp">{{ exp }} Experience</p>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skill {
+.skill-card {
   text-align: center;
   &__title {
     margin-bottom: 1px;

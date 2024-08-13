@@ -1,5 +1,5 @@
 <template>
-  <section class="skills">
+  <section class="skills-section">
     <TheSkill v-for="skill in skills" :key="skill.name" :name="skill.name" :exp="skill.exp" />
   </section>
 </template>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skills {
+.skills-section {
   border: 1px solid $white-color;
   border-left: none;
   border-right: none;
