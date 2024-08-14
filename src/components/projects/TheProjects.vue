@@ -1,7 +1,13 @@
 <template>
   <section class="projects-section">
     <ProjectsHeader />
-    <ProjectCard v-for="project in projects" :key="project.name" />
+    <ProjectCard
+      v-for="project in projects"
+      :key="project.name"
+      :name="project.name"
+      :images="project.images"
+      :links="project.links"
+    />
   </section>
 </template>
 
@@ -16,46 +22,40 @@ export default {
   setup() {
     const projects = ref([
       {
-        imgSmall: '../../assets/thumbnail-project-1-small.webp',
+        images: { small: '../../assets/thumbnail-project-1-small.webp' },
         name: 'DESIGN PORTFOLIO',
         tags: 'HTML CSS',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       },
       {
-        imgSmall: '../../assets/thumbnail-project-2-small.webp',
+        images: { small: '../../assets/thumbnail-project-2-small.webp' },
         name: 'E-LEARNING LANDING PAGE',
         tags: 'HTML CSS',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       },
       {
-        imgSmall: '../../assets/thumbnail-project-3-small.webp',
+        images: { small: '../../assets/thumbnail-project-3-small.webp' },
         name: 'TODO WEB APP',
         tags: 'HTML CSS JAVASCRIPT',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       },
       {
-        imgSmall: '../../assets/thumbnail-project-4-small.webp',
+        images: { small: '../../assets/thumbnail-project-4-small.webp' },
         name: 'ENTERTAINMENT WEB APP',
         tags: 'HTML CSS JAVASCRIPT',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       },
       {
-        imgSmall: '../../assets/thumbnail-project-5-small.webp',
+        images: { small: '../../assets/thumbnail-project-5-small.webp' },
         name: 'MEMORY GAME',
         tags: 'HTML CSS JAVASCRIPT',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       },
       {
-        imgSmall: '../../assets/thumbnail-project-6-small.webp',
+        images: { small: '../../assets/thumbnail-project-6-small.webp' },
         name: 'ART GALLERY SHOWCASE',
         tags: 'HTML CSS JAVASCRIPT',
-        viewProjectLink: '#',
-        viewCodeLink: '#'
+        links: { project: '#', code: '#' }
       }
     ])
 
