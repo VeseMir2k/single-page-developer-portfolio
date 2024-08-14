@@ -22,8 +22,5 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  &__img {
-    width: 100%;
-  }
 }
 </style>
