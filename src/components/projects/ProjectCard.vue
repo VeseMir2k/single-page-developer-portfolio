@@ -1,6 +1,6 @@
 <template>
   <article class="project-card">
-    <img class="project-card__img" src="../../assets/thumbnail-project-1-small.webp" alt="" />
+    <ProjectCardImage />
     <ProjectCardHeader />
     <ProjectCardButtons />
   </article>
@@ -9,10 +9,11 @@
 <script>
 import ProjectCardHeader from './ProjectCardHeader.vue'
 import ProjectCardButtons from './ProjectCardButtons.vue'
+import ProjectCardImage from './ProjectCardImage.vue'
 
 export default {
   name: 'ProjectCard',
-  components: { ProjectCardHeader, ProjectCardButtons }
+  components: { ProjectCardImage, ProjectCardHeader, ProjectCardButtons }
 }
 </script>
 
