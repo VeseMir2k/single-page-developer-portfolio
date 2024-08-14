@@ -2,16 +2,17 @@
   <article class="project-card">
     <img class="project-card__img" src="../../assets/thumbnail-project-1-small.webp" alt="" />
     <ProjectCardHeader />
-    <div class="project-card__buttons"></div>
+    <ProjectCardButtons />
   </article>
 </template>
 
 <script>
 import ProjectCardHeader from './ProjectCardHeader.vue'
+import ProjectCardButtons from './ProjectCardButtons.vue'
 
 export default {
   name: 'ProjectCard',
-  components: { ProjectCardHeader }
+  components: { ProjectCardHeader, ProjectCardButtons }
 }
 </script>
 
