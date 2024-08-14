@@ -1,10 +1,16 @@
 <template>
-  <img class="project-card-image" src="../../assets/thumbnail-project-1-small.webp" alt="" />
+  <img class="project-card-image" :src="images.small" alt="" />
 </template>
 
 <script>
 export default {
-  name: 'ProjectCardImage'
+  name: 'ProjectCardImage',
+  props: {
+    images: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 

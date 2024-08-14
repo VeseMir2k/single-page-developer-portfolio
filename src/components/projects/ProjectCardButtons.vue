@@ -1,7 +1,7 @@
 <template>
   <div class="project-card-buttons">
-    <BasicButton text="view project" />
-    <BasicButton text="view code" />
+    <BasicButton text="view project" :link="links.project" />
+    <BasicButton text="view code" :link="links.code" />
   </div>
 </template>
 
@@ -10,7 +10,10 @@ import BasicButton from '../BasicButton.vue'
 
 export default {
   name: 'ProjectCardButtons',
-  components: { BasicButton }
+  components: { BasicButton },
+  props: {
+    links: { type: Object, required: true }
+  }
 }
 </script>
 

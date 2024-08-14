@@ -1,16 +1,25 @@
 <template>
   <div class="project-card-header">
-    <h4 class="project-card-header__title">DESIGN PORTFOLIO</h4>
+    <h4 class="project-card-header__title">{{ name }}</h4>
     <div class="project-card-header__tags">
-      <div class="project-card-header__tag">HTML</div>
-      <div class="project-card-header__tag">CSS</div>
+      <div class="project-card-header__tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ProjectCardHeader'
+  name: 'ProjectCardHeader',
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    tags: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -19,10 +28,14 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  &__title {
+    text-transform: uppercase;
+  }
   &__tags {
     @include tag-font;
     display: flex;
     gap: 18px;
+    text-transform: uppercase;
   }
 }
 </style>

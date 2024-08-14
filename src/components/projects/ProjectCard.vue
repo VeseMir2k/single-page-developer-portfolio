@@ -1,8 +1,8 @@
 <template>
   <article class="project-card">
-    <ProjectCardImage />
-    <ProjectCardHeader />
-    <ProjectCardButtons />
+    <ProjectCardImage :images="images" />
+    <ProjectCardHeader :name="name" :tags="tags" />
+    <ProjectCardButtons :links="links" />
   </article>
 </template>
 
@@ -13,7 +13,25 @@ import ProjectCardImage from './ProjectCardImage.vue'
 
 export default {
   name: 'ProjectCard',
-  components: { ProjectCardImage, ProjectCardHeader, ProjectCardButtons }
+  components: { ProjectCardImage, ProjectCardHeader, ProjectCardButtons },
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    images: {
+      type: Object,
+      required: true
+    },
+    tags: {
+      type: Array,
+      required: true
+    },
+    links: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
