@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .contact-section {
-  background-color: $dark-gray-color;
+  background-color: $dark-grey-color;
   padding: 60px 16px 90px;
 }
 </style>

@@ -29,12 +29,26 @@ export default {
 
 <style lang="scss" scoped>
 .skills-section {
-  border: 1px solid $white-color;
-  border-left: none;
-  border-right: none;
+  position: relative;
   padding: 40px 16px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    height: 1px;
+    background-color: $white-color;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
 }
 </style>

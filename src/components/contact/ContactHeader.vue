@@ -14,4 +14,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contact-header {
+  text-align: center;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__info {
+    color: $grey-color;
+  }
+}
+</style>
