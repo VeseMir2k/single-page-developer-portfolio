@@ -13,7 +13,11 @@ import ProjectCardImage from './ProjectCardImage.vue'
 
 export default {
   name: 'ProjectCard',
-  components: { ProjectCardImage, ProjectCardHeader, ProjectCardButtons },
+  components: {
+    ProjectCardImage,
+    ProjectCardHeader,
+    ProjectCardButtons
+  },
   props: {
     name: {
       type: String,

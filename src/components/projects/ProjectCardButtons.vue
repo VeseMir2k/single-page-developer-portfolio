@@ -10,9 +10,14 @@ import BasicButton from '../BasicButton.vue'
 
 export default {
   name: 'ProjectCardButtons',
-  components: { BasicButton },
+  components: {
+    BasicButton
+  },
   props: {
-    links: { type: Object, required: true }
+    links: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>

@@ -16,20 +16,23 @@ import BasicButton from '../BasicButton.vue'
 
 export default {
   name: 'HeaderIntro',
-  components: { BasicButton }
+  components: {
+    BasicButton
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .header-intro {
-  text-align: center;
   margin-top: 40px;
+  text-align: center;
+
   &__title {
     margin-bottom: 20px;
   }
   &__name {
-    display: inline-block;
     border-bottom: 4px solid $green-color;
+    display: inline-block;
   }
   &__description {
     color: $grey-color;

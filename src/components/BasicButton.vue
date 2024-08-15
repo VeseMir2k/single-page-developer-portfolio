@@ -1,5 +1,5 @@
 <template>
-  <a class="button" :href="link">{{ text }}</a>
+  <a class="button" :href="link">{ { text } }</a>
 </template>
 
 <script>
@@ -19,21 +19,22 @@ export default {
 <style lang="scss" scoped>
 .button {
   @include button-font;
-  display: inline-block;
-  text-transform: uppercase;
   color: $white-color;
-  text-decoration: none;
+  display: inline-block;
   padding-bottom: 12px;
   position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
   &::after {
+    background-color: $green-color;
+    bottom: 0;
     content: '';
     display: block;
     height: 2px;
-    position: absolute;
-    bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
-    background-color: $green-color;
   }
   &:hover {
     color: $green-color;

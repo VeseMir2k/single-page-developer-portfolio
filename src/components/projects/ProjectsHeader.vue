@@ -10,7 +10,9 @@ import BasicButton from '../BasicButton.vue'
 
 export default {
   name: 'ProjectsHeader',
-  components: { BasicButton }
+  components: {
+    BasicButton
+  }
 }
 </script>
 

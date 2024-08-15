@@ -13,29 +13,33 @@ import TheSocials from '../TheSocials.vue'
 
 export default {
   name: 'TheFooter',
-  components: { TheLogo, TheSocials }
+  components: {
+    TheLogo,
+    TheSocials
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .footer-section {
-  position: relative;
-  padding: 40px 16px 60px;
   background-color: $dark-grey-color;
+  padding: 40px 16px 60px;
+  position: relative;
+
   &__logo-socials {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
   &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 16px;
-    right: 16px;
-    height: 1px;
     background-color: $white-color;
+    content: '';
+    height: 1px;
+    left: 16px;
+    position: absolute;
+    right: 16px;
+    top: 0;
   }
 }
 </style>

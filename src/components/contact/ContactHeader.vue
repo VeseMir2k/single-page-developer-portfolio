@@ -17,6 +17,7 @@ export default {
 <style lang="scss" scoped>
 .contact-header {
   text-align: center;
+
   &__title {
     margin-bottom: 20px;
   }

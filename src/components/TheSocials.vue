@@ -50,6 +50,7 @@ export default {
 .socials {
   display: flex;
   gap: 25px;
+
   &__icon {
     width: 20px;
   }

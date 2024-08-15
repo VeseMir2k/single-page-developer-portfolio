@@ -10,39 +10,61 @@ import TheSkill from './TheSkill.vue'
 
 export default {
   name: 'TheSkills',
-  components: { TheSkill },
+  components: {
+    TheSkill
+  },
 
   setup() {
     const skills = ref([
-      { name: 'HTML', exp: '4 Years' },
-      { name: 'CSS', exp: '4 Years' },
-      { name: 'JavaScript', exp: '4 Years' },
-      { name: 'Accessibility', exp: '4 Years' },
-      { name: 'React', exp: '3 Years' },
-      { name: 'Sass', exp: '3 Years' }
+      {
+        name: 'HTML',
+        exp: '4 Years'
+      },
+      {
+        name: 'CSS',
+        exp: '4 Years'
+      },
+      {
+        name: 'JavaScript',
+        exp: '4 Years'
+      },
+      {
+        name: 'Accessibility',
+        exp: '4 Years'
+      },
+      {
+        name: 'React',
+        exp: '3 Years'
+      },
+      {
+        name: 'Sass',
+        exp: '3 Years'
+      }
     ])
 
-    return { skills }
+    return {
+      skills
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .skills-section {
-  position: relative;
-  padding: 40px 16px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 40px 16px;
+  position: relative;
+
   &::before,
   &::after {
-    content: '';
-    position: absolute;
-
-    left: 16px;
-    right: 16px;
-    height: 1px;
     background-color: $white-color;
+    content: '';
+    height: 1px;
+    left: 16px;
+    position: absolute;
+    right: 16px;
   }
   &::before {
     top: 0;

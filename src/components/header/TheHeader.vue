@@ -21,42 +21,51 @@ import ringsPattern from '../../assets/pattern-rings.svg'
 
 export default {
   name: 'TheHeader',
-  components: { TheLogo, TheSocials, HeaderIntro },
+  components: {
+    TheLogo,
+    TheSocials,
+    HeaderIntro
+  },
   setup() {
-    return { profileImage, circlePattern, ringsPattern }
+    return {
+      profileImage,
+      circlePattern,
+      ringsPattern
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .header-section {
-  position: relative;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0 16px 80px;
+  position: relative;
+
   &__logo-socials {
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
     position: absolute;
     top: 20px;
-    gap: 20px;
+    width: 100%;
   }
   &__profile-image {
     width: 180px;
   }
   &__rings-pattern {
+    left: -350px;
     position: absolute;
     top: 130px;
-    left: -350px;
     z-index: -1;
   }
   &__circle-pattern {
     position: absolute;
-    top: 265px;
     right: -65px;
+    top: 265px;
   }
 }
 </style>
