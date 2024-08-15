@@ -1,0 +1,17 @@
+<template>
+  <div class="contact-header">
+    <h3 class="contact-header__title">Contact</h3>
+    <p class="contact-header__info">
+      I would love to hear about your project and how I could help. Please fill in the form, and
+      I’ll get back to you as soon as possible.
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ContactHeader'
+}
+</script>
+
+<style lang="scss" scoped></style>

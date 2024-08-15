@@ -75,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .projects-section {
-  padding: 80px 0;
+  padding: 80px 16px;
   &__container {
     display: flex;
     flex-direction: column;

@@ -32,7 +32,7 @@ export default {
   border: 1px solid $white-color;
   border-left: none;
   border-right: none;
-  padding: 40px 0;
+  padding: 40px 16px;
   display: flex;
   flex-direction: column;
   gap: 24px;
