@@ -1,12 +1,12 @@
 <template>
-  <header class="header">
-    <div class="header__logo-socials">
+  <header class="header-section">
+    <div class="header-section__logo-socials">
       <TheLogo />
       <TheSocials />
     </div>
-    <img class="header__profile-image" :src="profileImage" alt="" />
-    <img class="header__rings-pattern" :src="ringsPattern" alt="" />
-    <img class="header__circle-pattern" :src="circlePattern" alt="" />
+    <img class="header-section__profile-image" :src="profileImage" alt="" />
+    <img class="header-section__rings-pattern" :src="ringsPattern" alt="" />
+    <img class="header-section__circle-pattern" :src="circlePattern" alt="" />
     <HeaderIntro />
   </header>
 </template>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
+.header-section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,6 @@ export default {
     position: absolute;
     top: 20px;
     gap: 20px;
-    text-align: center;
   }
   &__profile-image {
     width: 180px;
