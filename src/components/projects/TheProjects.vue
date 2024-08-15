@@ -111,6 +111,17 @@ export default {
 <style lang="scss" scoped>
 .projects-section {
   padding: 80px 16px;
+  position: relative;
+
+  &::before {
+    background-image: url('../../assets/pattern-rings.svg');
+    content: '';
+    height: 129px;
+    left: 50%;
+    position: absolute;
+    top: -65px;
+    width: 530px;
+  }
 
   &__container {
     display: flex;
