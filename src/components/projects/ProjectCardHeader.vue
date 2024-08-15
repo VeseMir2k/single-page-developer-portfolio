@@ -1,8 +1,8 @@
 <template>
   <div class="project-card-header">
-    <h4 class="project-card-header__title">{ { name } }</h4>
+    <h4 class="project-card-header__title">{{ name }}</h4>
     <div class="project-card-header__tags">
-      <div class="project-card-header__tag" v-for="tag in tags" :key="tag">{ { tag } }</div>
+      <div class="project-card-header__tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
     </div>
   </div>
 </template>

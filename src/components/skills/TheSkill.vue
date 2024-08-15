@@ -1,7 +1,7 @@
 <template>
   <div class="skill-card">
-    <h3 class="skill-card__title">{ { name } }</h3>
-    <p class="skill-card__exp">{ { exp } } Experience</p>
+    <h3 class="skill-card__title">{{ name }}</h3>
+    <p class="skill-card__exp">{{ exp }} Experience</p>
   </div>
 </template>
 

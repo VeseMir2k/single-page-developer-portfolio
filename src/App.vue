@@ -15,7 +15,13 @@ import TheSkills from './components/skills/TheSkills.vue'
 
 export default {
   name: 'App',
-  components: { TheHeader, TheSkills, TheProjects, TheContact, TheFooter }
+  components: {
+    TheHeader,
+    TheSkills,
+    TheProjects,
+    TheContact,
+    TheFooter
+  }
 }
 </script>
 
