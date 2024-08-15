@@ -1,15 +1,17 @@
 <template>
   <section class="contact-section">
     <ContactHeader />
+    <ContactForm />
   </section>
 </template>
 
 <script>
+import ContactForm from './ContactForm.vue'
 import ContactHeader from './ContactHeader.vue'
 
 export default {
   name: 'TheContact',
-  components: { ContactHeader }
+  components: { ContactHeader, ContactForm }
 }
 </script>
 
@@ -17,5 +19,8 @@ export default {
 .contact-section {
   background-color: $dark-grey-color;
   padding: 60px 16px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 </style>
