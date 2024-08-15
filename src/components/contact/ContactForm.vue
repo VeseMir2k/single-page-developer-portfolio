@@ -27,6 +27,17 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
+
+  &::before {
+    background-image: url('../../assets/pattern-rings.svg');
+    bottom: 7px;
+    content: '';
+    height: 129px;
+    left: -343px;
+    position: absolute;
+    width: 530px;
+  }
 
   &__input,
   &__textarea {
@@ -37,12 +48,10 @@ export default {
     color: $white-color;
     padding-left: 24px;
 
-    &:focus,
     &:focus {
       border-bottom-color: $green-color;
       outline: none;
     }
-    &::placeholder,
     &::placeholder {
       text-transform: uppercase;
     }
