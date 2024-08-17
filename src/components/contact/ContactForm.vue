@@ -1,19 +1,87 @@
 <template>
-  <form class="form" @submit.prevent="handleSubmitForm">
-    <input class="form__input" type="text" placeholder="name" />
-    <input class="form__input" type="text" placeholder="email" />
-    <textarea class="form__textarea" rows="4" placeholder="message"></textarea>
+  <form class="form" @submit.prevent="submitForm" novalidate>
+    <input
+      class="form__input"
+      v-model="form.username"
+      @blur="validateField(form.username, 3, 24, errors.username, 'Username')"
+      type="text"
+      placeholder="name"
+    />
+    <input
+      class="form__input"
+      v-model="form.email"
+      @blur="validateEmail"
+      type="email"
+      placeholder="email"
+    />
+    <textarea
+      class="form__textarea"
+      v-model="form.message"
+      @blur="validateField(form.message, 3, 244, errors.message, 'Message')"
+      rows="4"
+      placeholder="message"
+    ></textarea>
     <button class="form__button" type="submit">SEND MESSAGE</button>
   </form>
 </template>
 
 <script setup>
+import { reactive } from 'vue'
+
 defineOptions({
   name: 'ContactForm'
 })
 
-const handleSubmitForm = () => {
-  console.log('Wysłano')
+const form = reactive({
+  username: '',
+  email: '',
+  message: ''
+})
+
+const errors = reactive({
+  username: '',
+  email: '',
+  message: ''
+})
+
+const validateField = (field, min, max, err, name) => {
+  err = ''
+
+  if (field.trim().length <= 0) {
+    err = `${name} is required.`
+  } else if (field.trim().length < min) {
+    err = `${name} must be at least ${min} characters long.`
+  } else if (field.trim().length > max) {
+    err = `${name} must be less than ${max} characters long.`
+  } else {
+    err = null
+  }
+}
+
+const validateEmail = () => {
+  errors.email = ''
+
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+  if (form.email.trim().length <= 0) {
+    errors.email = 'Email is required.'
+  } else if (!emailPattern.test(form.email.trim())) {
+    errors.email = 'Please enter a valid email address.'
+  } else {
+    errors.email = null
+  }
+}
+
+const submitForm = () => {
+  validateField(form.username, 3, 24, errors.username, 'Username')
+  validateEmail()
+  validateField(form.message, 3, 244, errors.message, 'Message')
+
+  if (!errors.username && !errors.email && !errors.message) {
+    console.log('Send')
+  } else {
+    console.log('Error')
+  }
 }
 </script>
 
