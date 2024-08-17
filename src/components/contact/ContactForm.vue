@@ -4,7 +4,7 @@
       <input
         class="form__input"
         v-model="form.username"
-        @blur="validateField(form.username, 3, 24, errors.username, 'Username')"
+        @blur="validateField('username', 3, 24, 'Username')"
         type="text"
         placeholder="name"
       />
@@ -24,7 +24,7 @@
       <textarea
         class="form__textarea"
         v-model="form.message"
-        @blur="validateField(form.message, 3, 244, errors.message, 'Message')"
+        @blur="validateField('message', 3, 244, 'Message')"
         rows="4"
         placeholder="message"
       ></textarea>
@@ -36,10 +36,6 @@
 
 <script setup>
 import { reactive } from 'vue'
-
-defineOptions({
-  name: 'ContactForm'
-})
 
 const form = reactive({
   username: '',
@@ -53,35 +49,35 @@ const errors = reactive({
   message: ''
 })
 
-const validateField = (field, min, max, errKey, name) => {
-  if (field.trim().length <= 0) {
-    errors[errKey] = `${name} is required.`
-  } else if (field.trim().length < min) {
-    errors[errKey] = `${name} must be at least ${min} characters long.`
-  } else if (field.trim().length > max) {
-    errors[errKey] = `${name} must be less than ${max} characters long.`
+const validateField = (field, min, max, name) => {
+  const value = form[field].trim()
+  if (value.length === 0) {
+    errors[field] = `${name} is required.`
+  } else if (value.length < min) {
+    errors[field] = `${name} must be at least ${min} characters long.`
+  } else if (value.length > max) {
+    errors[field] = `${name} must be less than ${max} characters long.`
   } else {
-    errors[errKey] = null
+    errors[field] = null
   }
 }
 
 const validateEmail = () => {
-  if (form.email.trim().length <= 0) {
+  const value = form.email.trim()
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  if (value.length === 0) {
     errors.email = 'Email is required.'
+  } else if (!emailPattern.test(value)) {
+    errors.email = 'Please enter a valid email address.'
   } else {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if (!emailPattern.test(form.email.trim())) {
-      errors.email = 'Please enter a valid email address.'
-    } else {
-      errors.email = null
-    }
+    errors.email = null
   }
 }
 
 const submitForm = () => {
-  validateField(form.username, 3, 24, 'username', 'Username')
+  validateField('username', 3, 24, 'Username')
   validateEmail()
-  validateField(form.message, 3, 244, 'message', 'Message')
+  validateField('message', 3, 244, 'Message')
 
   if (!errors.username && !errors.email && !errors.message) {
     console.log('Send')
@@ -110,17 +106,20 @@ const submitForm = () => {
 
   &__group {
     display: flex;
-    flex-direction: column;
+    position: relative;
   }
 
   &__error {
     color: $red-color;
     @include error-font;
-    text-align: right;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
   }
 
   &__input,
   &__textarea {
+    flex-grow: 1;
     @include body-mobile-font;
     position: relative;
     background-color: transparent;
