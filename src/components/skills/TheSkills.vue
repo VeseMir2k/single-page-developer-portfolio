@@ -4,49 +4,40 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import TheSkill from './TheSkill.vue'
 
-export default {
-  name: 'TheSkills',
-  components: {
-    TheSkill
+defineOptions({
+  name: 'TheSkills'
+})
+
+const skills = ref([
+  {
+    name: 'HTML',
+    exp: '4 Years'
   },
-
-  setup() {
-    const skills = ref([
-      {
-        name: 'HTML',
-        exp: '4 Years'
-      },
-      {
-        name: 'CSS',
-        exp: '4 Years'
-      },
-      {
-        name: 'JavaScript',
-        exp: '4 Years'
-      },
-      {
-        name: 'Accessibility',
-        exp: '4 Years'
-      },
-      {
-        name: 'React',
-        exp: '3 Years'
-      },
-      {
-        name: 'Sass',
-        exp: '3 Years'
-      }
-    ])
-
-    return {
-      skills
-    }
+  {
+    name: 'CSS',
+    exp: '4 Years'
+  },
+  {
+    name: 'JavaScript',
+    exp: '4 Years'
+  },
+  {
+    name: 'Accessibility',
+    exp: '4 Years'
+  },
+  {
+    name: 'React',
+    exp: '3 Years'
+  },
+  {
+    name: 'Sass',
+    exp: '3 Years'
   }
-}
+])
 </script>
 
 <style lang="scss" scoped>

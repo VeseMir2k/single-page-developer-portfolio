@@ -7,17 +7,13 @@
   </footer>
 </template>
 
-<script>
+<script setup>
 import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
 
-export default {
-  name: 'TheFooter',
-  components: {
-    TheLogo,
-    TheSocials
-  }
-}
+defineOptions({
+  name: 'TheFooter'
+})
 </script>
 
 <style lang="scss" scoped>

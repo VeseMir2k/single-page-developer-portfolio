@@ -6,44 +6,39 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import gitHubIcon from '../assets/icon-github.svg'
 import frontendMentorIcon from '../assets/icon-frontend-mentor.svg'
 import likedInIcon from '../assets/icon-linkedin.svg'
 import twitterIcon from '../assets/icon-twitter.svg'
 
-export default {
-  name: 'TheSocials',
-  setup() {
-    const socialIcons = ref([
-      {
-        name: 'GitHub',
-        src: gitHubIcon,
-        link: '#'
-      },
-      {
-        name: 'FrontendMentor',
-        src: frontendMentorIcon,
-        link: '#'
-      },
-      {
-        name: 'LinkedIn',
-        src: likedInIcon,
-        link: '#'
-      },
-      {
-        name: 'Twitter',
-        src: twitterIcon,
-        link: '#'
-      }
-    ])
+defineOptions({
+  name: 'TheSocials'
+})
 
-    return {
-      socialIcons
-    }
+const socialIcons = ref([
+  {
+    name: 'GitHub',
+    src: gitHubIcon,
+    link: '#'
+  },
+  {
+    name: 'FrontendMentor',
+    src: frontendMentorIcon,
+    link: '#'
+  },
+  {
+    name: 'LinkedIn',
+    src: likedInIcon,
+    link: '#'
+  },
+  {
+    name: 'Twitter',
+    src: twitterIcon,
+    link: '#'
   }
-}
+])
 </script>
 
 <style lang="scss" scoped>

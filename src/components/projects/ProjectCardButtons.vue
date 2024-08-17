@@ -5,21 +5,19 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BasicButton from '../BasicButton.vue'
 
-export default {
-  name: 'ProjectCardButtons',
-  components: {
-    BasicButton
-  },
-  props: {
-    links: {
-      type: Object,
-      required: true
-    }
+defineOptions({
+  name: 'ProjectCardButtons'
+})
+
+defineProps({
+  links: {
+    type: Object,
+    required: true
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

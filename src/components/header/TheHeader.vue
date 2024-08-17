@@ -11,7 +11,7 @@
   </header>
 </template>
 
-<script>
+<script setup>
 import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
 import HeaderIntro from './HeaderIntro.vue'
@@ -19,21 +19,9 @@ import profileImage from '../../assets/image-profile-mobile.webp'
 import circlePattern from '../../assets/pattern-circle.svg'
 import ringsPattern from '../../assets/pattern-rings.svg'
 
-export default {
-  name: 'TheHeader',
-  components: {
-    TheLogo,
-    TheSocials,
-    HeaderIntro
-  },
-  setup() {
-    return {
-      profileImage,
-      circlePattern,
-      ringsPattern
-    }
-  }
-}
+defineOptions({
+  name: 'TheHeader'
+})
 </script>
 
 <style lang="scss" scoped>

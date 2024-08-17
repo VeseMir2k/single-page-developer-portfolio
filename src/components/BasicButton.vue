@@ -2,18 +2,19 @@
   <a class="button" :href="link">{{ text }}</a>
 </template>
 
-<script>
-export default {
-  name: 'BasicButton',
-  props: {
-    link: {
-      type: String
-    },
-    text: {
-      type: String
-    }
+<script setup>
+defineOptions({
+  name: 'BasicButton'
+})
+
+defineProps({
+  link: {
+    type: String
+  },
+  text: {
+    type: String
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

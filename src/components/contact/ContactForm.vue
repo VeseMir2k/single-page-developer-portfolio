@@ -7,18 +7,13 @@
   </form>
 </template>
 
-<script>
-export default {
-  name: 'ContactForm',
-  setup() {
-    const handleSubmitForm = () => {
-      console.log('Wysłano')
-    }
+<script setup>
+defineOptions({
+  name: 'ContactForm'
+})
 
-    return {
-      handleSubmitForm
-    }
-  }
+const handleSubmitForm = () => {
+  console.log('Wysłano')
 }
 </script>
 

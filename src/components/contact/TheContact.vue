@@ -5,17 +5,13 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import ContactForm from './ContactForm.vue'
 import ContactHeader from './ContactHeader.vue'
 
-export default {
-  name: 'TheContact',
-  components: {
-    ContactHeader,
-    ContactForm
-  }
-}
+defineOptions({
+  name: 'TheContact'
+})
 </script>
 
 <style lang="scss" scoped>

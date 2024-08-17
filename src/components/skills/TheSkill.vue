@@ -5,18 +5,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TheSkill',
-  props: {
-    name: {
-      type: String
-    },
-    exp: {
-      type: String
-    }
+<script setup>
+defineOptions({
+  name: 'TheSkill'
+})
+
+defineProps({
+  name: {
+    type: String
+  },
+  exp: {
+    type: String
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

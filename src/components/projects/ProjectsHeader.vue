@@ -5,15 +5,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BasicButton from '../BasicButton.vue'
 
-export default {
-  name: 'ProjectsHeader',
-  components: {
-    BasicButton
-  }
-}
+defineOptions({
+  name: 'ProjectsHeader'
+})
 </script>
 
 <style lang="scss" scoped>

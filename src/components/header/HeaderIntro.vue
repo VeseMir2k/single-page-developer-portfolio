@@ -11,15 +11,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BasicButton from '../BasicButton.vue'
 
-export default {
-  name: 'HeaderIntro',
-  components: {
-    BasicButton
-  }
-}
+defineOptions({
+  name: 'HeaderIntro'
+})
 </script>
 
 <style lang="scss" scoped>

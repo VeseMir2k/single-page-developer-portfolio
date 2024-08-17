@@ -8,10 +8,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+defineOptions({
   name: 'ContactHeader'
-}
+})
 </script>
 
 <style lang="scss" scoped>

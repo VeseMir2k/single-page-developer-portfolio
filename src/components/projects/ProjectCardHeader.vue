@@ -7,20 +7,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ProjectCardHeader',
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    tags: {
-      type: Array,
-      required: true
-    }
+<script setup>
+defineOptions({
+  name: 'ProjectCardHeader'
+})
+
+defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  tags: {
+    type: Array,
+    required: true
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

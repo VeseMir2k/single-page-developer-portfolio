@@ -6,37 +6,33 @@
   </article>
 </template>
 
-<script>
+<script setup>
 import ProjectCardHeader from './ProjectCardHeader.vue'
 import ProjectCardButtons from './ProjectCardButtons.vue'
 import ProjectCardImage from './ProjectCardImage.vue'
 
-export default {
-  name: 'ProjectCard',
-  components: {
-    ProjectCardImage,
-    ProjectCardHeader,
-    ProjectCardButtons
+defineOptions({
+  name: 'ProjectCard'
+})
+
+defineProps({
+  name: {
+    type: String,
+    required: true
   },
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    images: {
-      type: Object,
-      required: true
-    },
-    tags: {
-      type: Array,
-      required: true
-    },
-    links: {
-      type: Object,
-      required: true
-    }
+  images: {
+    type: Object,
+    required: true
+  },
+  tags: {
+    type: Array,
+    required: true
+  },
+  links: {
+    type: Object,
+    required: true
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
