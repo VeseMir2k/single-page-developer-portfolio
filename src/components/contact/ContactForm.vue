@@ -2,7 +2,7 @@
   <form class="form" @submit.prevent="submitForm" novalidate>
     <div class="form__group">
       <input
-        class="form__input"
+        :class="['form__input', { 'form__input--error': errors.username }]"
         v-model="form.username"
         @blur="validateField('username', 3, 24, 'Username')"
         type="text"
@@ -12,7 +12,7 @@
     </div>
     <div class="form__group">
       <input
-        class="form__input"
+        :class="['form__input', { 'form__input--error': errors.email }]"
         v-model="form.email"
         @blur="validateEmail"
         type="email"
@@ -22,7 +22,7 @@
     </div>
     <div class="form__group">
       <textarea
-        class="form__textarea"
+        :class="['form__textarea', { 'form__textarea--error': errors.message }]"
         v-model="form.message"
         @blur="validateField('message', 3, 244, 'Message')"
         rows="4"
@@ -136,6 +136,10 @@ const submitForm = () => {
     }
     &::placeholder {
       text-transform: uppercase;
+    }
+
+    &--error {
+      border-bottom-color: $red-color;
     }
   }
   &__button {
