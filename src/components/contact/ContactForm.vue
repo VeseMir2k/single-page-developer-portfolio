@@ -1,26 +1,35 @@
 <template>
   <form class="form" @submit.prevent="submitForm" novalidate>
-    <input
-      class="form__input"
-      v-model="form.username"
-      @blur="validateField(form.username, 3, 24, errors.username, 'Username')"
-      type="text"
-      placeholder="name"
-    />
-    <input
-      class="form__input"
-      v-model="form.email"
-      @blur="validateEmail"
-      type="email"
-      placeholder="email"
-    />
-    <textarea
-      class="form__textarea"
-      v-model="form.message"
-      @blur="validateField(form.message, 3, 244, errors.message, 'Message')"
-      rows="4"
-      placeholder="message"
-    ></textarea>
+    <div class="form__group">
+      <input
+        class="form__input"
+        v-model="form.username"
+        @blur="validateField(form.username, 3, 24, errors.username, 'Username')"
+        type="text"
+        placeholder="name"
+      />
+      <span v-if="errors.username" class="form__error">{{ errors.username }}</span>
+    </div>
+    <div class="form__group">
+      <input
+        class="form__input"
+        v-model="form.email"
+        @blur="validateEmail"
+        type="email"
+        placeholder="email"
+      />
+      <span v-if="errors.email" class="form__error">{{ errors.email }}</span>
+    </div>
+    <div class="form__group">
+      <textarea
+        class="form__textarea"
+        v-model="form.message"
+        @blur="validateField(form.message, 3, 244, errors.message, 'Message')"
+        rows="4"
+        placeholder="message"
+      ></textarea>
+      <span v-if="errors.message" class="form__error">{{ errors.message }}</span>
+    </div>
     <button class="form__button" type="submit">SEND MESSAGE</button>
   </form>
 </template>
@@ -44,43 +53,40 @@ const errors = reactive({
   message: ''
 })
 
-const validateField = (field, min, max, err, name) => {
-  err = ''
-
+const validateField = (field, min, max, errKey, name) => {
   if (field.trim().length <= 0) {
-    err = `${name} is required.`
+    errors[errKey] = `${name} is required.`
   } else if (field.trim().length < min) {
-    err = `${name} must be at least ${min} characters long.`
+    errors[errKey] = `${name} must be at least ${min} characters long.`
   } else if (field.trim().length > max) {
-    err = `${name} must be less than ${max} characters long.`
+    errors[errKey] = `${name} must be less than ${max} characters long.`
   } else {
-    err = null
+    errors[errKey] = null
   }
 }
 
 const validateEmail = () => {
-  errors.email = ''
-
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-
   if (form.email.trim().length <= 0) {
     errors.email = 'Email is required.'
-  } else if (!emailPattern.test(form.email.trim())) {
-    errors.email = 'Please enter a valid email address.'
   } else {
-    errors.email = null
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (!emailPattern.test(form.email.trim())) {
+      errors.email = 'Please enter a valid email address.'
+    } else {
+      errors.email = null
+    }
   }
 }
 
 const submitForm = () => {
-  validateField(form.username, 3, 24, errors.username, 'Username')
+  validateField(form.username, 3, 24, 'username', 'Username')
   validateEmail()
-  validateField(form.message, 3, 244, errors.message, 'Message')
+  validateField(form.message, 3, 244, 'message', 'Message')
 
   if (!errors.username && !errors.email && !errors.message) {
     console.log('Send')
   } else {
-    console.log('Error')
+    console.log('Errors present:', errors)
   }
 }
 </script>
@@ -102,9 +108,21 @@ const submitForm = () => {
     width: 530px;
   }
 
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__error {
+    color: $red-color;
+    @include error-font;
+    text-align: right;
+  }
+
   &__input,
   &__textarea {
     @include body-mobile-font;
+    position: relative;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $white-color;
