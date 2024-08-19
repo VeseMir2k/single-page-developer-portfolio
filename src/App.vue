@@ -1,8 +1,10 @@
 <template>
   <TheHeader />
-  <TheSkills />
-  <TheProjects />
-  <TheContact />
+  <main>
+    <TheSkills />
+    <TheProjects />
+    <TheContact />
+  </main>
   <TheFooter />
 </template>
 
