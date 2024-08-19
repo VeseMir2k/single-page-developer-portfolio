@@ -5,8 +5,6 @@
       <TheSocials />
     </div>
     <img class="header-section__profile-image" :src="profileImage" alt="" />
-    <img class="header-section__rings-pattern" :src="ringsPattern" alt="" />
-    <img class="header-section__circle-pattern" :src="circlePattern" alt="" />
     <HeaderIntro />
   </header>
 </template>
@@ -16,8 +14,6 @@ import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
 import HeaderIntro from './HeaderIntro.vue'
 import profileImage from '../../assets/image-profile-mobile.webp'
-import circlePattern from '../../assets/pattern-circle.svg'
-import ringsPattern from '../../assets/pattern-rings.svg'
 
 defineOptions({
   name: 'TheHeader'
@@ -44,16 +40,25 @@ defineOptions({
   &__profile-image {
     width: 180px;
   }
-  &__rings-pattern {
-    left: -350px;
+  &::before {
+    content: '';
+    width: 530px;
+    height: 129px;
     position: absolute;
-    top: 130px;
+    top: 124px;
+    right: 50%;
     z-index: -1;
+    background-image: url('../../assets/pattern-rings.svg');
   }
-  &__circle-pattern {
+
+  &::after {
+    content: '';
+    width: 129px;
+    height: 129px;
     position: absolute;
-    right: -65px;
-    top: 265px;
+    top: 264px;
+    right: calc(50% - 250px);
+    background-image: url('../../assets/pattern-circle.svg');
   }
 }
 </style>
