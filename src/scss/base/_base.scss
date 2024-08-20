@@ -32,3 +32,9 @@ p {
   @include body-mobile-font;
   margin: 0;
 }
+
+@media (min-width: $tablet-breakpoint) {
+  h1 {
+    @include heading-m-tablet-font;
+  }
+}

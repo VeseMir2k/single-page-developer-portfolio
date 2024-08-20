@@ -61,4 +61,17 @@ defineOptions({
     background-image: url('../../assets/pattern-circle.svg');
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .header-section {
+    &__logo-socials {
+      flex-direction: row;
+      justify-content: space-between;
+      top: 30px;
+      left: 32px;
+      right: 32px;
+      width: auto;
+    }
+  }
+}
 </style>

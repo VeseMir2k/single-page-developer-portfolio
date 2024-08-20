@@ -50,4 +50,13 @@ const socialIcons = ref([
     width: 20px;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .socials {
+    gap: 32px;
+    &__icon {
+      width: 24px;
+    }
+  }
+}
 </style>

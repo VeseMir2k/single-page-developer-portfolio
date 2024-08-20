@@ -6,4 +6,10 @@
 .logo {
   text-align: center;
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .logo {
+    text-align: left;
+  }
+}
 </style>
