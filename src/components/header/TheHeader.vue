@@ -4,7 +4,11 @@
       <TheLogo />
       <TheSocials />
     </div>
-    <img class="header-section__profile-image" :src="profileImage" alt="" />
+    <picture>
+      <source media="(min-width: 1200px)" :srcset="profileImageDesktop" />
+      <source media="(min-width: 768px)" :srcset="profileImageTablet" />
+      <img class="header-section__profile-image" :src="profileImageMobile" alt="" />
+    </picture>
     <HeaderIntro />
   </header>
 </template>
@@ -13,7 +17,9 @@
 import TheLogo from '../TheLogo.vue'
 import TheSocials from '../TheSocials.vue'
 import HeaderIntro from './HeaderIntro.vue'
-import profileImage from '../../assets/image-profile-mobile.webp'
+import profileImageMobile from '../../assets/image-profile-mobile.webp'
+import profileImageTablet from '../../assets/image-profile-tablet.webp'
+import profileImageDesktop from '../../assets/image-profile-desktop.webp'
 
 defineOptions({
   name: 'TheHeader'
@@ -64,6 +70,8 @@ defineOptions({
 
 @media (min-width: $tablet-breakpoint) {
   .header-section {
+    height: 660px;
+    padding: 0 32px 0;
     &__logo-socials {
       flex-direction: row;
       justify-content: space-between;
@@ -71,6 +79,14 @@ defineOptions({
       left: 32px;
       right: 32px;
       width: auto;
+    }
+    &__profile-image {
+      width: auto;
+      height: 600px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
     }
   }
 }
