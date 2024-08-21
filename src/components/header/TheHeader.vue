@@ -99,4 +99,28 @@ defineOptions({
     }
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .header-section {
+    padding: 0;
+    height: 820px;
+
+    &__logo-socials {
+      left: 0;
+      right: 32px;
+    }
+    &__profile-image {
+      height: 720px;
+      width: 445px;
+    }
+    &::before {
+      top: 135px;
+      left: -20%;
+    }
+    &::after {
+      top: 520px;
+      right: 35%;
+    }
+  }
+}
 </style>

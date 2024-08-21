@@ -53,4 +53,19 @@ defineOptions({
     }
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .header-intro {
+    width: 710px;
+    left: 0;
+    top: 200px;
+    &__title {
+      margin-bottom: 45px;
+    }
+    &__description {
+      width: 445px;
+      margin-bottom: 65px;
+    }
+  }
+}
 </style>
