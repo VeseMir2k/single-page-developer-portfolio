@@ -72,6 +72,7 @@ defineOptions({
   .header-section {
     height: 660px;
     padding: 0 32px 0;
+    display: block;
     &__logo-socials {
       flex-direction: row;
       justify-content: space-between;
@@ -87,6 +88,14 @@ defineOptions({
       right: 0;
       top: 0;
       z-index: -1;
+    }
+    &::before {
+      top: 85px;
+      right: 65%;
+    }
+    &::after {
+      top: 470px;
+      right: calc(0px - 65px);
     }
   }
 }

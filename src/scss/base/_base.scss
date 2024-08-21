@@ -37,4 +37,12 @@ p {
   h1 {
     @include heading-m-tablet-font;
   }
+
+  h2 {
+    @include heading-xl-tablet-font;
+  }
+
+  p {
+    @include body-tablet-font;
+  }
 }

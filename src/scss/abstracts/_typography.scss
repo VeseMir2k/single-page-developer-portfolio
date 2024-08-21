@@ -1,6 +1,6 @@
 // Desktop
 
-@mixin heading-xl-font {
+@mixin heading-xl-desktop-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 88px;
   font-weight: 700;
@@ -8,7 +8,7 @@
   line-height: 88px;
 }
 
-@mixin heading-l-font {
+@mixin heading-l-desktop-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -16,14 +16,14 @@
   line-height: 56px;
 }
 
-@mixin heading-m-font {
+@mixin heading-m-desktop-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
-@mixin body-font {
+@mixin body-desktop-font {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 400;

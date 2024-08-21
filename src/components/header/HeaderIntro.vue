@@ -36,4 +36,18 @@ defineOptions({
     margin-bottom: 24px;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .header-intro {
+    width: 445px;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+    top: 150px;
+    left: 32px;
+    &__title {
+      margin-bottom: 66px;
+    }
+  }
+}
 </style>
