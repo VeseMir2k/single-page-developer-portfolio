@@ -36,6 +36,15 @@ defineProps({
   .skill-card {
     text-align: left;
     width: 50%;
+    &__title {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .skill-card {
+    width: 33.33%;
   }
 }
 </style>

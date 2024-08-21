@@ -64,6 +64,7 @@ const skills = ref([
     bottom: 0;
   }
 }
+
 @media (min-width: $tablet-breakpoint) {
   .skills-section {
     padding: 52px 32px;
@@ -76,6 +77,16 @@ const skills = ref([
     }
     &::after {
       height: 0;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    .skills-section {
+      padding: 72px 0;
+      &::before {
+        left: 0;
+        right: 0;
+      }
     }
   }
 }
