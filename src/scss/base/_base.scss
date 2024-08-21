@@ -60,3 +60,25 @@ p {
     @include body-tablet-font;
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  h1 {
+    @include heading-m-desktop-font;
+  }
+
+  h2 {
+    @include heading-xl-desktop-font;
+  }
+
+  h3 {
+    @include heading-l-desktop-font;
+  }
+
+  h4 {
+    @include heading-m-desktop-font;
+  }
+
+  p {
+    @include body-desktop-font;
+  }
+}
