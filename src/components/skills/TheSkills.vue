@@ -64,4 +64,19 @@ const skills = ref([
     bottom: 0;
   }
 }
+@media (min-width: $tablet-breakpoint) {
+  .skills-section {
+    padding: 52px 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 52px 0;
+    &::before {
+      left: 32px;
+      right: 32px;
+    }
+    &::after {
+      height: 0;
+    }
+  }
+}
 </style>

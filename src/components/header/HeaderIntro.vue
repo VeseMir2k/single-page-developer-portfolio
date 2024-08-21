@@ -48,6 +48,9 @@ defineOptions({
     &__title {
       margin-bottom: 66px;
     }
+    &__name {
+      border-bottom-width: 6px;
+    }
   }
 }
 </style>

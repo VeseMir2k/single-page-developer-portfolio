@@ -31,4 +31,11 @@ defineProps({
     color: $grey-color;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .skill-card {
+    text-align: left;
+    width: 50%;
+  }
+}
 </style>
