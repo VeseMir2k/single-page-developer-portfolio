@@ -120,4 +120,19 @@ const projects = ref([
     gap: 40px;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .projects-section {
+    padding: 100px 32px;
+    &::before {
+      top: -110px;
+      left: 75%;
+    }
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px 22px;
+    }
+  }
+}
 </style>

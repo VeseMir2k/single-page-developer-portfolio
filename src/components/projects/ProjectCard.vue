@@ -39,6 +39,13 @@ defineProps({
 .project-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .project-card {
+    flex-basis: calc(50% - 11px);
+  }
 }
 </style>

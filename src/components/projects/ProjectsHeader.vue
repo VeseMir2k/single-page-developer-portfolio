@@ -19,4 +19,13 @@ defineOptions({
   justify-content: space-between;
   margin-bottom: 40px;
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .projects-header {
+    margin-bottom: 48px;
+    &__title {
+      @include heading-xl-tablet-font;
+    }
+  }
+}
 </style>

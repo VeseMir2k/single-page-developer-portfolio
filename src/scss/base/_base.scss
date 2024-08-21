@@ -46,6 +46,10 @@ p {
     @include heading-l-tablet-font;
   }
 
+  h4 {
+    @include heading-m-tablet-font;
+  }
+
   p {
     @include body-tablet-font;
   }
