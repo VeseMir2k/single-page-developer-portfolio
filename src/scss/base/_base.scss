@@ -7,6 +7,12 @@ body {
   color: $white-color;
   overflow-x: hidden;
   padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  max-width: 1110px;
 }
 
 h1 {
