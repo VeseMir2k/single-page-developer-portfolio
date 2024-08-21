@@ -38,4 +38,18 @@ defineOptions({
     top: 0;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .footer-section {
+    padding: 30px 32px 40px;
+    &__logo-socials {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &::before {
+      left: 32px;
+      right: 32px;
+    }
+  }
+}
 </style>
