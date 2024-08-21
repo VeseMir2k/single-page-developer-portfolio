@@ -157,4 +157,14 @@ const submitForm = () => {
     }
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .form {
+    width: 445px;
+    &::after {
+      bottom: -65px;
+      left: -120%;
+    }
+  }
+}
 </style>

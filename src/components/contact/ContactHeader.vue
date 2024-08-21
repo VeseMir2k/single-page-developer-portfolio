@@ -25,4 +25,10 @@ defineOptions({
     color: $grey-color;
   }
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .contact-header {
+    width: 445px;
+  }
+}
 </style>

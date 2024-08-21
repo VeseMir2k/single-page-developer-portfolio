@@ -22,4 +22,10 @@ defineOptions({
   gap: 50px;
   padding: 60px 16px 90px;
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .contact-section {
+    align-items: center;
+  }
+}
 </style>
