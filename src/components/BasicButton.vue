@@ -26,6 +26,7 @@ defineProps({
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  align-self: center;
 
   &::after {
     background-color: $green-color;
