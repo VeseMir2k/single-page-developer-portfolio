@@ -28,4 +28,10 @@ defineOptions({
     align-items: center;
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .contact-section {
+    width: 100%;
+  }
+}
 </style>

@@ -104,6 +104,7 @@ defineOptions({
   .header-section {
     padding: 0;
     height: 820px;
+    width: 1120px;
 
     &__logo-socials {
       left: 0;

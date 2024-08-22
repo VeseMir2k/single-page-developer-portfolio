@@ -1,10 +1,10 @@
 <template>
   <TheHeader />
-  <main>
+  <main class="main">
     <TheSkills />
     <TheProjects />
-    <TheContact />
   </main>
+  <TheContact />
   <TheFooter />
 </template>
 
@@ -20,4 +20,10 @@ defineOptions({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media (min-width: $desktop-breakpoint) {
+  .main {
+    width: 1120px;
+  }
+}
+</style>

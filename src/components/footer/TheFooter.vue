@@ -52,4 +52,15 @@ defineOptions({
     }
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .footer-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__logo-socials {
+      width: 1120px;
+    }
+  }
+}
 </style>
