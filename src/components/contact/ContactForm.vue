@@ -167,4 +167,13 @@ const submitForm = () => {
     }
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .form {
+    &::after {
+      bottom: -40px;
+      left: -230%;
+    }
+  }
+}
 </style>

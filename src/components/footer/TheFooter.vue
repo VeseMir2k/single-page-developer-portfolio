@@ -61,6 +61,11 @@ defineOptions({
     &__logo-socials {
       width: 1120px;
     }
+    &::before {
+      width: 1120px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 </style>

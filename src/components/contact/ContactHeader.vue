@@ -31,4 +31,13 @@ defineOptions({
     width: 445px;
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .contact-header {
+    text-align: left;
+    &__title {
+      @include heading-xl-desktop-font;
+    }
+  }
+}
 </style>
