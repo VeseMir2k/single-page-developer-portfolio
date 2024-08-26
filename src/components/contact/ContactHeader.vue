@@ -37,6 +37,7 @@ defineOptions({
     text-align: left;
     &__title {
       @include heading-xl-desktop-font;
+      margin-bottom: 32px;
     }
   }
 }

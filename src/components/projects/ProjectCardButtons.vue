@@ -25,4 +25,9 @@ defineProps({
   display: flex;
   gap: 30px;
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .project-card-buttons {
+  }
+}
 </style>

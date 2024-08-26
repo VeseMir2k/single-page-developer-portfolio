@@ -19,4 +19,9 @@ defineProps({
 .project-card-image {
   width: 100%;
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .project-card-image {
+  }
+}
 </style>
